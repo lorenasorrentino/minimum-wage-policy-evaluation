@@ -1,0 +1,51 @@
+---
+title: "09_results_summary"
+output: html_document
+date: "2026-01-15"
+---
+
+# Minimum Wages and Unemployment
+
+## 1 Research Question
+
+This project examines whether increases in statutory minimum wages are associated with changes in unemployment rates across European countries. The analysis uses panel data methods to account for cross-country heterogeneity and common macroeconomic shocks.
+
+## 2. Data
+
+The dataset combines information on statutory minimum wages with macroeconomic indicators including unemployment rates, GDP per capita (in purchasing power standards), inflation, and population size. The final regression sample includes 26 European countries observed between 2020 and 2024. Due to differences in data availability across sources, the panel is unbalanced.
+
+## 3. Empirical Strategy
+
+The analysis proceeds in three steps. First, pooled OLS models provide a descriptive benchmark. Second, a country fixed effects model exploits within-country variation over time to control for unobserved, time-invariant heterogeneity. Third, a two-way fixed effects specification including both country and year fixed effects is adopted as the main model, controlling additionally for common macroeconomic shocks. Standard errors are clustered at the country level to account for serial correlation and heteroskedasticity within countries.
+
+## 4. Results
+
+### 4.1 Descriptive and Baseline Results
+
+Baseline pooled OLS estimates suggest a negative association between minimum wages and unemployment. However, this relationship weakens substantially once macroeconomic controls are included, indicating that cross-country differences in economic development and labor market structures drive much of the baseline correlation. These models are therefore interpreted as descriptive benchmarks rather than causal estimates.
+
+A country fixed effect model, which exploits within-country variation over time, indicates a negative association between increases in minimum wages and unemployment. While this suggests that time-invariant country characteristics explain an important share of the cross-sectional correlation, these specifications do not yet account for common macroeconomic shocks affecting all countries simultaneously.
+
+### 4.2 Main Specification: Two-Way Fixed Effects
+
+The preferred two-way fixed effects model includes both country and year fixed effects and controls for GDP per capita, inflation, and population size. Standard errors are clustered at the country level. This specification isolates within-country changes in minimum wages net of persistent national characteristics and common time trends.
+
+In this main specification, the coefficient of the minimum wage is statistically insignificant. This finding indicates that, once common macroeconomic shocks and synchronized policy dynamics are accounted for, there is no robust evidence that changes in statutory minimum wages systematically affect unemployment rates within countries. In contrast, GDP per capita remains a statistically significant predictor of unemployment, highlighting the dominant role of broader economic conditions.
+
+Overall, the results suggest that the negative associations observed in simpler specifications largely reflect omitted common shocks and cross-country heterogeneity rather than a direct effect of minimum wage policies on employment outcomes.
+
+## 5. Robustness Check
+
+As a robustness check, the analysis considers a lagged minimum wage specification to allow for delayed labor market adjustments and to reduce concerns about contemporaneous reverse causality. The results remain qualitatively similar, with no statistically significant effect of minimum wages on unemployment.
+
+## 6. Interpretation and Economic Magnitude
+
+Across all specifications, the estimated effects of minimum wages on unemployment are economically modest. Even in models where the minimum wage coefficient attains statistical significance, the implied magnitude is small. This suggests that, within the range of observed policy variation, minimum wage adjustments are unlikely to be a quantitatively important driver of aggregate unemployment dynamics.
+
+## 7. Limitations
+
+While fixed effects models substantially reduce omitted variable bias arising from time-invariant unobserved heterogeneity, the analysis does not exploit a clearly exogenous policy shock. Therefore, the results should be interpreted as associations rather than causal estimates.
+
+## 8. Conclusion
+
+Overall, the findings suggest that moderate increases in statutory minimum wages are not systematically associated with higher unemployment rates once macroeconomic conditions and structural differences across countries are accounted for. These results are consistent with a growing literature emphasizing the importance of broader economic conditions over minimum wage policies in explaining unemployment dynamics.
